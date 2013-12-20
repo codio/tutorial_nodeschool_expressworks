@@ -1,5 +1,5 @@
 @annotation:tour hello_world
-#Hello World
+#1. Hello World
 ##Challenge
 Create an [Express.js](https://npmjs.org/package/express) app that runs on localhost:3000, and outputs "Hello World!" when somebody goes to root '/home'. `process.argv[2]` will be provided by Expressworks to you, this is the port number.
 
@@ -30,7 +30,7 @@ You will need to install Express and Path modules
 
 
 @annotation:tour jade
-#Jade Templating
+#2. Jade Templating
 ##Challenge
 Create an Express.js app with a home page (/home) rendered by the [jade template engine](http://jade-lang.com/), that shows current date (`toDateString`).
 
@@ -70,7 +70,7 @@ When creating your projects from scratch, install jade dependency with `npm inst
 
 
 @annotation:tour good_old_form
-#Good Old Form
+#3. Good Old Form
 ##Challenge
 Write a route ('/form') that processes HTML form input `<form><input name="str"/></form>` and prints backwards the `str` value.
 
@@ -95,7 +95,7 @@ You can test using node like this
 - [Connect library](http://www.senchalabs.org/connect/)
 
 @annotation:tour static
-#Static
+#4. Static
 ##Challenge
 Apply static middleware to serve index.html file without any routes. The index.html file is provided and usable via `process.argv[3]` value of the path to it. However, you can use your own file with this content:
 
@@ -127,7 +127,7 @@ To test with node, assuming you have created an `index.html` file in the root fo
 
 
 @annotation:tour stylish_css
-#Stylish CSS
+#5. Stylish CSS
 ##Challenge
 Style your HTML from previous example with some [Stylus](https://npmjs.org/package/stylus) middleware. The path to main.styl file is provided in `process.argv[3]` or you can create your own file/folder from these
 
@@ -163,7 +163,7 @@ For your own projects, Stylus requires to be installed like any other dependency
 
 
 @annotation:tour param_pam_pam
-#Param Pam Pam
+#6. Param Pam Pam
 ##Challenge
 Create an Express.js server that processes PUT '/message/:id' requests, e.g. `PUT '/message/526aa677a8ceb64569c9d4fb'`
 
@@ -188,7 +188,7 @@ Using curl, try something like
 
 
 @annotation:tour whats_in_query
-#What's in Query
+#7. What's in Query
 ##Challenge
 Write a route that extracts data from query string in the GET '/search' URL route, e.g. `?results=recent&include_tabs=true`  and then transforms outputs it back to the user in JSON format.
 
@@ -201,7 +201,7 @@ To output json we can use, `res.send(object)`.
 
 
 @annotation:tour json_me
-#JSON Me 
+#8. JSON Me 
 ##Challenge
 
 ** NOT RELEASED **
