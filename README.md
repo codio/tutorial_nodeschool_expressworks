@@ -1,150 +1,87 @@
-expressworks
-============
+[![nodeschool-logo](stuff/nodeschool.png)](http://nodeschool.io)
+#Tutorial 07 - ExpressWorks
+**Learn the basics of the Express.js framework.**
 
-Express.js workshop based on [workshopper](https://github.com/rvagg/workshopper) and inspired by [stream-adventure](https://github.com/substack/stream-adventure) by [@substack](https://twitter.com/substack) and [@maxogden](https://twitter.com/maxogden).
+*All content is written and produced by [http://nodeschool.io](http://nodeschool.io). Please see the credits at the bottom of this page and if you have learnt a lot from these tutorials, please make a donation (also at the bottom).*
 
-![Hello World Express.js app](https://raw.github.com/azat-co/expressworks/master/images/hello-world.png)
+#Video
+If you prefer a video rather than reading the instructions below, there is a video that runs through the Codio + Nodeschool.io system (yes, it's a tutorial on how to use the tutorial) : TODO LINK
 
-## Contributors
+#Installation
+1. Create an account with http://codio.com (don't be frightened, it's free for all public projects).
+1. You're probably looking at this in GitHub already but if not, go to [https://github.com/codio](https://github.com/codio) and search for "Nodeschool", then select the tutorial you want.
+2. Copy the SSH or HTTPS url from beneath al the GitHub settings on the right hand side (NOT the main browser page url).
+3. Go to [Create Project](https://codio.com/s/docs/console/creating/) in your Codio Dashboard, select the Git tab and paste in the url you just copied.
+4. Press Create Project and you'll be in the IDE with your tutorial project ready and waiting.
 
-     38  Azat Mardanov
-     3  Charlotte Spencer
-     1  Wojciech Gawronski
+You'll now need to install the Nodeschool tutorial (each one is an npm package) onto your project's Box. There are two ways to do this ...
 
-PS: via `git shortlog -n -s`
-
-## Installation (recommended)
-
-Recommended global installation:
-
-```bash
-$ npm install -g expressworks
-$ expressworks
-```
+- Hands Dirty: open up a Terminal with from the 'Tools->Terminal' menu, then enter `npm install -g learnyounode`.
+- Lazy Way: click on the "Install <tut-name>" menu item. Once installed, you can close that tab.
 
 
-If you see errors, try:
+#2 Writing your code
+There are two different ways you can use Codio to run the Nodeschool.io tutorials. You can switch between them at any time. The great thing is that your code is neatly organized into lessons that you can refer back to later.
 
-```bash
-$ sudo npm install -g expressworks
-```
-
-## Local Installation (advanced)
-
-Run&install locally:
-
-```bash
-$ npm install expressworks
-$ cd expressworks
-$ npm install
-$ node expressworks
-```
-
-# Usage
-
-ExpressWorks understands these commands:
-
-```
-Usage
-
-  expressworks
-    Show a menu to interactively select a workshop.
-  expressworks list
-    Show a newline-separated list of all the workshops.
-  expressworks select NAME
-    Select a workshop.
-  expressworks current
-    Show the currently selected workshop.
-  expressworks run program.js
-    Run your program against the selected input.
-  expressworks verify program.js
-    Verify your program against the expected output.
-```
-
-# Reset
-
-If you want to reset the list of completed tasks, clean the `~/.config/expressworks/completed.json` file.
-
-![Hello World Express.js app](https://raw.github.com/azat-co/expressworks/master/images/finished.png)
-
-# More Information
-
-Check out [Express.js Guide](http://expressjsguide.com).
-
-# Steps
+- **Tutorial Mode** : select the 'Tools->Tutorial' menu item. Each lesson is presented with a Code window on the left and the instructions on the right, which can be scrolled through and left in place while you code. You can navigate between lessons using the buttons above the instructions.
+- **Manual Mode** : open up the lessons folders and you will see a filename similar to the folder name. You can write your code here and click on the blue icon in the gutter to open up the instructions popup.
 
 
-## Hello World
+#Testing your code
+There are 2 ways you can test out your code using Node.js.
 
-Create an Express.js app that runs on localhost:3000, and outputs "Hello World!" when somebody goes to root '/home'.
+###1. The Easy Way: Add an entry to the 'Run' menu
+The easiest and fastest way of working is to modify the 'Run' menu (second dropdown menu from the right). To do this open up the `.codio` file in the root of the project. You should see a preconfigured item ...
 
-`process.argv[2]` will be provided by expressworks to you, this is the port number.
+  "Run with Node" : "node {{filepath}} 3 4 5"
 
-## Jade
+This command will always run the current code using node in a terminal window. You **must** have your code tab selected in the IDE before you press it or you will get a nonsense error. 
 
-Create an Express.js app with a home page (/home) rendered by jade template engine, that shows current date (toDateString).
+Each lesson requires different arguments so when you switch lessons, you should modify these arguments to suit. Now, when you in the 'write/test' cycle you can simply press the "Run with Node" menu option. 
 
+![instructions](stuff/menu.png)
 
-## Good Old Form
+###2. Shell out to the Terminal
+You can open a Terminal window at any time by selecting the 'Tools->Terminal' menu item. Your terminal defaults to the `~/workspace` folder, which equates to the root of your Codio code project. If you are writing your code in the lesson folder (for example `02_baby_steps`) then you will need to `cd` into that folder, so something like this
 
-Write a route ('/form') that processes HTML form input (<form><imput name="str"/></form>) and prints backwards the str value.
+    cd 02_baby_steps
+    node baby_steps.js 1 2 3
 
-## Static
+#Running your Code via the Tutorial system
+When you've got your code to the point where you think it is ready for the Tutorial system to check it, you should select the 'Run Lesson' item from the 'Run' menu. The tutorial system will automatically supply any required arguments to your project as required by the current lesson. You can see the 'Run Lesson' item in the above menu screenshot.
 
-Apply static middleware to server index.html file without any routes. The index.html file is provided and usable via `process.argv[3]` value of the path to it. However, you can use you're own file with this content:
+#Verifying your code
+Once you think you have completed the challenge, select the 'Verify Lesson' option from the 'Run' dropdown menu. The output will be shown in the console window. If is passes, you will see something like this
 
-```html
-  <html>
-    <head>
-      <link rel="stylesheet" type="text/css" href="/main.css"/>
-    </head>
-    <body>
-      <p>I am red!</p>
-    </body>
-  </html>
-```
+![Passed](stuff/passed.png)
 
-## Stylish CSS
+#Which lessons have I successfully completed?
+If you press the "Completed Lessons" command from the same menu, you will be shown in the console the list of all challenges that are already completed. You will see the following screen in the Terminal window hat appears. Completed lessons are clearly marked on the right.
 
-Style your HTML from previous example with some Stylus middleware. The path to main.styl file is provided in `process.argv[3]` or you can create your own file/folder from these:
+![Passed](stuff/completed.png)
 
-```css
-  p
-    color red
-```
+#Cheating (checking the recommended solution)
+Each lesson comes with a `solution.js` file. Try to avoid looking at it other than for verification purposes. We have highly sophisticated algorithms built into Codio that will detect any forms of cheating, peeking (however quick and subtle) and will publicly expose to your peers.
 
-The index.html file:
+#Doing everything from the command line
+For completeness sake, you can do everything from the command line rather than using Codio. Just open up the Terminal window from 'Tools->Terminal'.
 
-```html
-  <html>
-    <head>
-      <title>expressworks</title>
-      <link rel="stylesheet" type="text/css" href="/main.css"/>
-    </head>
-    <body>
-      <p>I am red!</p>
-    </body>
-  </html>
-```
+Each tutorial is installed as node module that can be run from the command line. If you take a look at the [http://nodeschool.io](http://nodeschool.io) documentation, you can see how everything can be done from the command line.
 
-## Param Pam Pam 
+#Other Tutorials
+[http://nodeschool.io](http://nodeschool.io) has a several excellent tutorials. We have packaged these up so they run within Codio and the full set can be found on our [Nodeschool Tutorial page.](http://codio.com/tutorials)
 
-Create an Express.js server that processes PUT `/message/:id` requests, e.g., PUT `/message/526aa677a8ceb64569c9d4fb`.
+#Credits
+![Nodeschool](http://nodeschool.io/images/nodeschool.png)
 
-As the response of this request return id SHA1 hashed with a date:
+The Nodeschool tutorials are the much excellent work of the following hackers
 
-```javascript
-  require('crypto')
-    .createHash('sha1')
-    .update(new Date().toDateString().toString() + id)
-    .digest('hex')
-```
+Rod Vagg ([github/rvagg](https://github.com/rvagg), [twitter@rvagg](http://twitter.com/rvagg)), 
+Andrey Sidorov ([github/sidorares](https://github.com/sidorares), [twitter@sidorares](http://twitter.com/sidorares)), 
+Julián Duque ([github/julianduque](https://github.com/julianduque), [twitter@julian_duque](http://twitter.com/julian_duque)), 
+Lars-Magnus Skog ([github/ralphtheninja](https://github.com/ralphtheninja), [twitter@ralphtheninja](http://twitter.com/ralphtheninja)), 
+Tim Inman ([github/thehack](https://github.com/thehack), [twitter@timinman](http://twitter.com/timinman)), 
+Dan Flettre ([github/Flet](https://github.com/Flet), [twitter@flettre](http://twitter.com/flettre)) 
 
-## What's in Query
-
-Write a route that extracts data from query string in the GET `/search` URL route, e.g., `?results=recent&include_tabs=true`, and then transforms outputs it back to the user in JSON format.
-
-## JSON Me
-
-Write a server that reads a file (file name is passed in `process.argv[3]`), parses it to JSON and outputs the content to the user with `res.json(object)`.
-
+##Donations
+If you feel you have benefitted from this or the other tutorials, how about [donating to Rodd Vagg using gittip](https://www.gittip.com/rvagg/)
