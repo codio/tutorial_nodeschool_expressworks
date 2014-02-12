@@ -32,7 +32,7 @@ You will need to install Express and Path modules
 @annotation:tour jade
 #2. Jade Templating
 ##Challenge
-Create an Express.js app with a home page (/home) rendered by the [jade template engine](http://jade-lang.com/), that shows current date (`toDateString`).
+Create an Express.js app with a home page ('/home') rendered by the [jade template engine](http://jade-lang.com/), that shows current date (`toDateString`).
 
 ###Hints
 Jade template file `index.jade` is provided:
@@ -75,7 +75,7 @@ When creating your projects from scratch, install jade dependency with `npm inst
 Write a route ('/form') that processes HTML form input `<form><input name="str"/></form>` and prints backwards the `str` value.
 
 ###Hints
-Express.js has urlencoded() middleware (from the [Connect library](http://www.senchalabs.org/connect/)) specified using [`app.use`](http://expressjs.com/api.html#app.use)
+Express.js has `urlencoded()` middleware (from the [Connect library](http://www.senchalabs.org/connect/)) specified using [`app.use`](http://expressjs.com/api.html#app.use)
 
     app.use(express.urlencoded())
 
@@ -83,7 +83,7 @@ Here is how we can flip the characters
 
     req.body.str.split('').reverse().join('')
 
-Avoid using soon to be depricated bodyParser() middleware.
+Avoid using soon to be deprecated `bodyParser()` middleware.
 
 You can test using node like this
 
