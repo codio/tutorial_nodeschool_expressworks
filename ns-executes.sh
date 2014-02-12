@@ -8,21 +8,21 @@ fi
  
 # Translate lesson name into correct name for Workshopper projects 
 if [ $2 == "hello_world" ]; then 
-    STR="HELLO WORLD" 
+    STR=" HELLO WORLD!" 
 elif [ $2 == "jade" ]; then 
-    STR="JADE" 
+    STR=" JADE" 
 elif [ $2 == "good_old_form" ]; then 
-    STR="GOOD OLD FORM" 
+    STR=" GOOD OLD FORM" 
 elif [ $2 == "static" ]; then 
-    STR="STATIC" 
+    STR=" STATIC" 
 elif [ $2 == "stylish_css" ]; then 
-    STR="STYLISH CSS" 
+    STR=" STYLISH CSS" 
 elif [ $2 == "param_pam_pam" ]; then 
-    STR="PARAM PAM PAM" 
+    STR=" PARAM PAM PAM" 
 elif [ $2 == "whats_in_query" ]; then 
-    STR="WHATS IN QUERY" 
+    STR=" WHAT'S IN QUERY" 
 elif [ $2 == "json_me" ]; then 
-    STR="JSON ME" 
+    STR=" JSON ME" 
 else 
     echo UNKNOWN: Make sure you have your code file selected before running/verifying 
     exit 0 
