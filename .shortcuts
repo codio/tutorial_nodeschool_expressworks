@@ -1,5 +1,0 @@
-{
-  "Run": "expressworks select {{current_file}} && expressworks run {{current_file}}",
-  "Verify": "expressworks select {{current_file}} && expressworks verify {{current_file}},
-  "default": "Run"
-}
