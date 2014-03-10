@@ -3,7 +3,7 @@
 **Learn the basics of the Express.js framework.**
 
 ###About the Author###
-This tutorial was written by [Azat Mardanov](https://github.com/azat-co). If you find this tutorial helpful and you'd like to say thanks to Azat, why not [make a small donation here?](https://www.gittip.com/azat-co)
+This tutorial was written by [Azat Mardanov](https://github.com/azat-co). If you find this tutorial helpful and you'd like to say thanks to Azat, why not [make a small donation here?](https://www.gittip.com/on/github/azat-co/)
 
 #Video
 If you prefer a video rather than reading the instructions below, there is a video that runs through the Codio + Nodeschool.io system (yes, it's a tutorial on how to use the tutorial) : [https://vimeo.com/86100550](https://vimeo.com/86100550)
