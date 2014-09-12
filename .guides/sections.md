@@ -126,7 +126,7 @@ Apply static middleware to serve index.html file without any routes. The index.h
     </html>
 
 ###Hints
-This you someone can call [static middleware](http://www.senchalabs.org/connect/)
+This is how someone can call [static middleware](http://www.senchalabs.org/connect/)
 
     app.use(express.static(path.join(__dirname, 'public')));
 
